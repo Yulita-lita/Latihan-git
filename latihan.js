@@ -1,3 +1,4 @@
+//Variabel
 console.log ("Hello Semua")
 
 var nama = "Jhon Doe"
