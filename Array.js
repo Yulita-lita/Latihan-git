@@ -7,9 +7,6 @@ console.log (angka)
 
 
 // Method (Fungsi Bawaan)
-var nama = "Muhammad Desta Greddy Aulia Rahman"
-console.log (nama.length)
-
  //Length
 console.log (angka.length)
 
@@ -24,13 +21,13 @@ console.log ("sebelum pop:" + angka)
 angka.pop ()
 console.log ("setelah pop:" + angka)
 
-console.log ("sebelum unshif: " + angka)
-angka.unshif(8)
-console.log ("setelah unshif: " + angka)
+console.log ("sebelum unshift:" + angka)
+angka.unshift(8)
+console.log ("setelah unshif:" + angka)
 
-console.log ("sebelum shift: " + angka)
+console.log ("sebelum shift:" + angka)
 angka.shift (9)
-console.log ("setelah shift: " + angka)
+console.log ("setelah shift:" + angka)
 
 
 
@@ -61,7 +58,33 @@ console.log (nama)
 console.log ("setelah di split")
 console.log(nama.split(" "))
 
-
 var nama = "Muhammad Desta Greddy Aulia Rahman"
 console.log (nama.length)
+console.log (angka.length)
 
+
+var peserta = ["andra", "taufik", "adit", ]
+console.log ("sebelum Sort")
+console.log (peserta)
+console.log ("setelah di Sort")
+console.log (peserta.sort ())
+console.log (peserta)
+console.log ("setelah di Reverse")
+console.log (peserta.reverse)
+console.log (peserta)
+
+
+// Slice 
+
+console.log ("sebelum Slice")
+console.log (peserta)
+var newPeserta = peserta.slice (2,3)
+console.log (newPeserta)
+console.log (peserta)
+
+// Splice 
+console.log ("sebelum splice")
+console.log (peserta)
+var newPeserta = peserta.splice (2,0, "Heldi", "Huda")
+console.log (newPeserta)
+console.log (peserta)
