@@ -10,7 +10,7 @@ console.log (angka)
 var nama = "Muhammad Desta Greddy Aulia Rahman"
 console.log (nama.length)
 
-// Length
+ //Length
 console.log (angka.length)
 
 
@@ -64,3 +64,4 @@ console.log(nama.split(" "))
 
 var nama = "Muhammad Desta Greddy Aulia Rahman"
 console.log (nama.length)
+
