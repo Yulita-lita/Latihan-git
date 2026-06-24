@@ -35,7 +35,7 @@ do {
     }
 
     var flag = 10;
-    while (flag > 2) {
+    while (flag > 1) {
         console.log ("Iterasi while ke:" + flag);
         flag-=2;
     }
