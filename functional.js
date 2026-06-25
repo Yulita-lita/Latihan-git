@@ -58,24 +58,3 @@ function tambah (a){
 
 console.log (tambah (2)(5))
 
-
-// contoh Komputasi berat tanpa currying function
-
-function getGreeting (){
-    var x = 0 
-    for (i=0; i <1000000000; i++) {
-        x +=i 
-    }
-    return "Selamat pagi"
-}
-
-function say (callback, name){
-    var greeting = callback ()
-    console.log (greeting, name)
-}
-var users = ["Desta", "Taufiq", "Huda", "Heldi", "Aditya"]
-
-users.map (function (user) {
-    return say (getGreeting, user)
-})
-
