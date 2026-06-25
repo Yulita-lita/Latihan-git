@@ -88,3 +88,54 @@ console.log (peserta)
 var newPeserta = peserta.splice (2,0, "Heldi", "Huda")
 console.log (newPeserta)
 console.log (peserta)
+
+var arr = ["Jeruk", "Mangga", "Apel"];
+for (var i = 0; i < arr.length; i++) {
+    console.log (arr [i]);
+}
+
+var names = ["John", "Doe", "Jack"]
+var i = 0 
+while (i < names.length) {
+    console.log (names[i])
+    i++
+}
+
+
+// Funcation 
+
+function tampilkan () {
+    console.log ("Halo!");
+}
+tampilkan ();
+
+function munculkanAngkaDua() {
+    return 2
+}
+var tampung = munculkanAngkaDua () ;
+console.log (tampung)
+
+
+function kalikanDua(angka) {
+    return angka *2
+}
+var tampung = kalikanDua (2);
+console.log (tampung)
+ 
+
+function tampilkanAngka(angkaPertama, angkaKedua= 2) {
+    return angkaPertama + angkaKedua
+}
+console.log (tampilkanAngka (5, 3))
+console.log (tampilkanAngka (6))
+
+var nama = "Yulita" 
+function tampilkanNama () {
+    console.log ("Halo!, " + nama);
+}
+tampilkanNama ();
+
+var fungsiPerkalian = function ( angkaPertama, angkaKedua) {
+    return angkaPertama * angkaKedua
+}
+console.log (fungsiPerkalian (2, 5))
