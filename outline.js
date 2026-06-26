@@ -8,7 +8,7 @@
 
 // Promise 
 
-// var isMomHappy = true;
+// var isMomHappy = false;
 
 // var willIGetNewPhone = new Promise(
 //     function (resolve, reject) {
@@ -37,25 +37,80 @@
 // askMom()
 
 
-function periksaDataPasien (nomorIdPasien) {
-    var dataPasien = [
-        {id : 1, nama: "john", jenisKelamin: "Laki-laki"},
-        {id : 2, nama: "Michael", jenisKelamin : "Laki-laki"}, 
-        {id : 3, nama: "Sarah", jenisKelamin : "Perempuan"},
-        {id : 4, nama: "Frank", jenisKelamin : "Laki-laki"},
-    ]
-    return new Promise (function (resolve, reject){
-        var pasien = dataPasien.find (x=> x.id === nomorIdPasien)
-        if (pasien === undefined){
-            reject ("data pasien tidak ada")
+// function periksaDataPasien (nomorIdPasien) {
+//     var dataPasien = [
+//         {id : 1, nama: "john", jenisKelamin: "Laki-laki"},
+//         {id : 2, nama: "Michael", jenisKelamin : "Laki-laki"}, 
+//         {id : 3, nama: "Sarah", jenisKelamin : "Perempuan"},
+//         {id : 4, nama: "Frank", jenisKelamin : "Laki-laki"},
+//     ]
+//     return new Promise (function (resolve, reject){
+//         var pasien = dataPasien.find (x=> x.id === nomorIdPasien)
+//         if (pasien === undefined){
+//             reject ("data pasien tidak ada")
+//         }else{
+//             resolve (pasien)
+//         }
+//     })
+     
+// }
+// periksaDataPasien (5).then (function(data){
+//     console.log (data)
+// }).catch (function (err){
+//     console.log (err)
+// })
+
+
+// Async/ Await 
+
+function doAsync() {
+    return new Promise ( function (resolve, reject){
+        var check = true
+        if (check){
+          resolve ("berhasil")
         }else{
-            resolve (pasien)
+          reject ("gagal")
         }
     })
-     
 }
-periksaDataPasien (5).then (function(data){
-    console.log (data)
-}).catch (function (err){
-    console.log (err)
-})
+async function hello (){
+    var result = await doAsync()
+    console.log(result)
+}
+hello ()
+
+async function hello(){
+    try {
+        var result = await doAsync ()
+        console.log (result)
+    }   catch (err){
+        console.log(err)
+    }
+}
+hello ()
+
+
+
+
+
+
+//Deklarasi Class di Javascript
+class Car {
+    constructor (brand, factory) {
+        this.brand = brand
+        this.factory = factory
+        this.sound = "honk! honk!vroomvroom"
+    }
+}
+var Car = class {
+    constructor (brand, factory) {
+        this.brand = brand
+        this.factory = factory
+    }
+}
+var Car = class Car2 {
+    constructor (brand, factory) {
+        this.brand = brand
+        this.factory = factory
+    }
+}
