@@ -81,7 +81,7 @@ function doAsync(nomorIdPasien) {
     })
 }
 
-async function periksaDataPasien(){
+async function hello(nomorIdPasien){
     try {
         var result = await doAsync ()
         console.log (result)
@@ -89,5 +89,5 @@ async function periksaDataPasien(){
         console.log(err.message)
     }
 }
-periksaDataPasien (2)
+hello (2)
 
