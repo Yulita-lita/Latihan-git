@@ -63,23 +63,25 @@ periksaDataPasien (3).then (function(data){
 
 //Async/ Await 
 
-function doAsync() {
+function doAsync(nomorIdPasien) {
     return new Promise ( function (resolve, reject){
-        var check = true
-        if (check){
-          resolve ("berhasil")
+        var dataPasien=[
+        {id : 1, nama: "john", jenisKelamin: "Laki-laki"},
+        {id : 2, nama: "Michael", jenisKelamin : "Laki-laki"}, 
+        {id : 3, nama: "Sarah", jenisKelamin : "Perempuan"},
+        {id : 4, nama: "Frank", jenisKelamin : "Laki-laki"},
+    ]
+    
+    var pasien = dataPasien.find (x=> x.id === nomorIdPasien)
+        if (pasien === undefined){
+            reject ("data pasien tidak ada")
         }else{
-          reject ("gagal")
+            resolve (pasien)
         }
     })
 }
-async function hello (){
-    var result = await doAsync()
-    console.log(result)
-}
-hello ()
 
-async function hello(){
+async function periksaDataPasien(){
     try {
         var result = await doAsync ()
         console.log (result)
@@ -87,4 +89,5 @@ async function hello(){
         console.log(err.message)
     }
 }
-hello ()
+periksaDataPasien (2)
+
