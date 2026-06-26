@@ -88,29 +88,3 @@ async function hello(){
     }
 }
 hello ()
-
-
-
-
-
-
-//Deklarasi Class di Javascript
-class Car {
-    constructor (brand, factory) {
-        this.brand = brand
-        this.factory = factory
-        this.sound = "honk! honk!vroomvroom"
-    }
-}
-var Car = class {
-    constructor (brand, factory) {
-        this.brand = brand
-        this.factory = factory
-    }
-}
-var Car = class Car2 {
-    constructor (brand, factory) {
-        this.brand = brand
-        this.factory = factory
-    }
-}
