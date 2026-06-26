@@ -84,7 +84,7 @@ async function hello(){
         var result = await doAsync ()
         console.log (result)
     }   catch (err){
-        console.log(err)
+        console.log(err.message)
     }
 }
 hello ()
