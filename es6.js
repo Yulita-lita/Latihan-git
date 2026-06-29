@@ -106,7 +106,7 @@
 
 let botol = {
     merek : "Aqua",
-    ukuran : "6000m",
+    ukuran : "6000ml",
     harga : 5000
 }
 // botol.warna = "biru"
